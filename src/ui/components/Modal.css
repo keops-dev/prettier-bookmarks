@@ -1,0 +1,51 @@
+@import "../colors.css";
+
+.modal-wrapper {
+    position: absolute;
+    place-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    z-index: 9998;
+}
+
+.modal-wrapper::after {
+    content: "";
+    background-color: var(--gray-900);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.modal {
+    background-color: #fff;
+    z-index: 9999;
+    min-height: 256px;
+    min-width: 384px;
+    max-height: 90vh;
+    max-width: 90vw;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 8px 0 8px 8px;
+    filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+}
+
+.modal-body {
+    overflow: auto;
+    padding-right: 8px;
+}
+
+.modal-open {
+    display: grid;
+}
+
+.hidden {
+    display: none;
+}

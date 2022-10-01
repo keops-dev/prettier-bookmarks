@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "strictNullChecks": true,
+        "module": "esnext",
+        "moduleResolution": "Node",
+        "target": "ESNext",
+        "resolveJsonModule": true,
+        "allowSyntheticDefaultImports": true
+    }
+}

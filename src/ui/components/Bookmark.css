@@ -1,0 +1,20 @@
+.bookmark {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    transition: box-shadow 0.05s ease-out;
+}
+
+.bookmark:hover {
+    background-color: #f1f5f9;
+    box-shadow: 0.1rem 0.1rem 0.2rem #cbd5e1, -0.2rem -0.2rem 0.1rem #f8fafc;
+}
+
+.icon {
+    display: inline-block;
+    height: 1.2rem;
+    width: 1.2rem;
+    margin-right: 1.5rem;
+}

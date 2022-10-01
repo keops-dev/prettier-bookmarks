@@ -1,0 +1,64 @@
+{
+    "name": "prettier-bookmarks",
+    "version": "0.1.0",
+    "description": "Prettier Bookmarks. A Firefox extension to add icons to bookmark folders and manage them with a cool interface!",
+    "author": {
+        "name": "Keops",
+        "email": "pierjcb@gmail.com",
+        "url": "https://github.com/keops-dev"
+    },
+    "private": "true",
+    "targets": {
+        "webext-dev": {
+            "sourceMap": {
+                "inline": true,
+                "inlineSources": true
+            }
+        },
+        "webext-prod": {
+            "distDir": "build"
+        }
+    },
+    "jest": {
+        "setupFiles": [
+            "fake-indexeddb/auto"
+        ]
+    },
+    "scripts": {
+        "start": "parcel src/manifest.json --host localhost --target webext-dev",
+        "build": "parcel build src/manifest.json --target webext-prod && web-ext build -s build -a . -o true",
+        "sign": "web-ext sign -s build -a . --api-key=$(grep API_KEY .env | cut -d '=' -f2) --api-secret=$(grep API_SECRET .env | cut -d '=' -f2)",
+        "test": "jest",
+        "check": "tsc --noEmit"
+    },
+    "keywords": [],
+    "license": "MIT",
+    "devDependencies": {
+        "@parcel/config-webextension": "^2.0.0",
+        "@parcel/transformer-inline-string": "^2.7.0",
+        "@parcel/validator-typescript": "^2.7.0",
+        "@types/firefox": "^0.0.31",
+        "@types/firefox-webext-browser": "^94.0.1",
+        "@types/lodash-es": "^4.17.6",
+        "@types/node": "^18.7.18",
+        "@typescript-eslint/eslint-plugin": "^5.37.0",
+        "eslint": "^8.23.1",
+        "eslint-config-standard": "^17.0.0",
+        "eslint-config-standard-with-typescript": "^23.0.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-n": "^15.2.5",
+        "eslint-plugin-no-unsanitized": "^4.0.1",
+        "eslint-plugin-promise": "^6.0.1",
+        "fake-indexeddb": "^4.0.0",
+        "jest": "^29.0.3",
+        "parcel": "^2.0.0",
+        "parcel-reporter-web-ext": "file:..",
+        "stream-browserify": "^3.0.0",
+        "typescript": "^4.8.3",
+        "web-ext": "^6.4.0"
+    },
+    "dependencies": {
+        "idb": "^7.0.2",
+        "vanilla-picker": "^2.12.1"
+    }
+}

@@ -1,0 +1,11 @@
+/.env
+/.parcel-cache
+/.vscode
+/build
+/doc
+/extra_A_supprimer?
+/node_modules
+/package-lock.json
+/prettier_bookmarks-0.0.1.zip
+/prettier_bookmarks-0.1.0.zip
+/readme__bk.txt

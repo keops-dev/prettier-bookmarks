@@ -1,0 +1,6 @@
+@import "../colors.css";
+
+ul {
+    list-style: none;
+    padding: 0;
+}

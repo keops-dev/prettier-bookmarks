@@ -1,0 +1,84 @@
+@import "../colors.css";
+
+.folder {
+    border-radius: 1rem;
+}
+
+.subfolders {
+    list-style: none;
+    /* position: relative; */
+    margin: 0;
+    border-radius: 0.25rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    background-color: var(--slate-100);
+    /* box-shadow: inset 0.1rem 0.1rem 0.2rem var(--slate-300),
+        inset -0.2rem -0.2rem 0.4rem var(--slate-50); */
+}
+
+.child-container {
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.title-container {
+    padding: 0.25rem 0.5rem 0.25rem 1.5rem;
+    border-radius: 0.25rem;
+    align-items: center;
+    user-select: none;
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.title-container:hover {
+    background-color: var(--slate-300);
+}
+
+.title-container:not(.caret) {
+    padding-left: 1.5rem;
+}
+
+.title {
+    color: var(--gray-900);
+    padding: 0 0.25rem 0 0.25rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.icon {
+    height: 1.2rem;
+    width: 1.2rem;
+    margin: 0 0.5rem 0 0.5rem;
+    color: var(--gray-900);
+    flex-shrink: 0;
+}
+
+.hidden {
+    display: none;
+}
+
+.caret::before {
+    content: "\2B9E";
+    color: black;
+    position: absolute;
+    display: inline-flex;
+    font-size: xx-small;
+    align-items: center;
+    left: 0.25rem;
+    transition: all 250ms;
+}
+
+.caret-down::before {
+    transform: rotate(90deg);
+    transform-origin: center center;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.active {
+    background-color: var(--slate-200);
+}

@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "version": "0.1.0",
+    "name": "Prettier Bookmarks",
+    "description": "A Firefox extension to add icons to bookmark folders and manage them with a cool interface!",
+    "icons": {
+        "48": "icons/prettier-bookmarks.svg"
+    },
+    "permissions": [
+        "bookmarks",
+        "menus",
+        "storage",
+        "notifications",
+        "nativeMessaging",
+        "https://*/*"
+    ],
+    "browser_action": {
+        "default_icon": "icons/prettier-bookmarks.svg",
+        "default_title": "Prettier bookmarks",
+        "default_popup": "ui/popup.html"
+    },
+    "background": {
+        "scripts": ["background.ts", "menus.ts"]
+    },
+    "web_accessible_resources": ["resources/svg/*.svg"],
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "prettier_bookmarks@keops.me"
+        }
+    },
+    "options_ui": {
+        "page": "ui/popup.html",
+        "open_in_tab": true,
+        "browser_style": true
+    },
+    "default_locale": "fr"
+}

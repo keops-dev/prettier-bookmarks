@@ -1,0 +1,16 @@
+ul[slot="dropdown"] {
+    list-style: none;
+    padding: 0.25rem 0.5rem;
+    margin: 0;
+}
+
+ul[slot="dropdown"] > li {
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.5rem;
+    padding: 0.25rem 0.5rem;
+}
+
+ul[slot="dropdown"] > li:hover {
+    background-color: #cbd5e1;
+}

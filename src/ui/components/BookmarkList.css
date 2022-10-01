@@ -1,0 +1,50 @@
+@import "../colors.css";
+
+:host {
+    flex-grow: 1;
+    overflow: auto;
+    margin-right: 1rem;
+    border-radius: 1rem;
+    background: #ebeff3;
+    box-shadow: inset 0.1rem 0.1rem 0.2rem var(--slate-300),
+        inset -0.1rem -0.1rem 0.1rem var(--slate-50);
+}
+
+.bookmark-list {
+    list-style: none;
+    margin: 0 1.5rem 0 1.5rem;
+    padding: 0;
+    border-radius: 1rem;
+    padding-top: 1rem;
+}
+
+.placeholder {
+    user-select: none;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+    color: var(--gray-200);
+}
+
+.placeholder-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+}
+
+.separator {
+    height: 0.5rem;
+    position: relative;
+}
+
+.separator::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    border-top: 1px dashed #64748b;
+}

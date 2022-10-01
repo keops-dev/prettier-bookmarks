@@ -1,0 +1,30 @@
+{
+    "extensionName": {
+        "message": "Prettier Bookmarks",
+        "description": "Name of the extension."
+    },
+    "openPrettierBookmarks": {
+        "message": "Open Prettier Bookmarks",
+        "description": "Edit bookmarks"
+    },
+    "addBookmark": {
+        "message": "Ajouter un marque-page",
+        "description": "Add bookmark"
+    },
+    "editBookmark": {
+        "message": "Modifier le marque-page",
+        "description": "Edit bookmark"
+    },
+    "removeBookmark": {
+        "message": "Supprimer le marque-page",
+        "description": "Remove bookmark"
+    },
+    "newBookmark": {
+        "message": "Nouveau marque-page",
+        "description": "New bookmark"
+    },
+    "newFolder": {
+        "message": "Nouveau dossier",
+        "description": "New folder"
+    }
+}
